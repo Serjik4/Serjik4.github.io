@@ -1,7 +1,7 @@
 ﻿
 
      <head> 
-         
+         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
      </head> 
      <body>   
           <P> Кнопка </P>
@@ -13,7 +13,14 @@
           
           
           <script>
-          alert('Hello world')
+          
+          var root = 'http://jsonplaceholder.typicode.com';
+          $.ajax({
+          url: root + '/posts/1',
+           method: 'GET'
+          }).then(function(data) {
+           alert(data);
+          });
           </script>
      </body> 
 </html>
