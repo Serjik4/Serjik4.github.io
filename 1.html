@@ -7,20 +7,26 @@
           <P> Кнопка </P>
           <form>
             <p>
-             <input type="button" value=" Нажми меня нежно ">
+             <input class="MyButton" type="button" value=" Нажми меня нежно ">
             </p>
           </form>
           
           
           <script>
-          
-          var root = 'http://jsonplaceholder.typicode.com';
-          $.ajax({
-          url: root + '/posts/1',
-           method: 'GET'
-          }).then(function(data) {
-           alert(data);
-          });
+          function getData(){
+            var root = 'http://jsonplaceholder.typicode.com';
+
+            $.ajax({
+            url: root + '/posts/1',
+             method: 'GET'
+            }).then(function(data) {
+             alert(data); 
+             console.log(data);
+            });
+          }
+
+          $('.MyButton').on('click', getData);
+
           </script>
      </body> 
 </html>
