@@ -14,13 +14,13 @@
           
           <script>
           function getData(){
-            var root = 'http://jsonplaceholder.typicode.com';
+            var root = 'https://randomuser.me/api/';
 
             $.ajax({
-            url: root + '/posts/1',
-             method: 'GET'
+            url: 'https://randomuser.me/api/',
+            dataType: 'json',
             }).then(function(data) {
-             alert(data.title); 
+             alert(data.picture); 
              console.log(data);
             });
           }
