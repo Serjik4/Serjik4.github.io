@@ -8,13 +8,13 @@
           <P> Кнопка </P>
           <form>
             <p>
-             <input class="MyButton" type="button" value=" Нажми меня нежно ">
+             <input class="MyButton" type="button" value=" Нажми меня нежно (pic) ">
             </p>
           </form>
           
           
           <script>
-          function getData(){
+          function getPicture(){
             var root = 'https://randomuser.me/api/';
 
             $.ajax({
@@ -29,5 +29,33 @@
           $('.MyButton').on('click', getData);
 
           </script>
+          
+
+
+
+
+          <form>
+            <p>
+             <input class="MyButton1" type="button" value=" Нажми меня нежно (text) ">
+            </p>
+          </form>
+
+          <script>
+          function getData(){
+            var root = 'http://jsonplaceholder.typicode.com';
+
+            $.ajax({
+            url: root + '/posts/1',
+             method: 'GET'
+            }).then(function(data) {
+             alert(data.title); 
+             console.log(data);
+            });
+          }
+
+          $('.MyButton1').on('click', getData);
+
+          </script>
+
      </body> 
 </html>
