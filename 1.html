@@ -5,7 +5,7 @@
          <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
      </head> 
      <body>   
-          <P> Кнопка </P>
+          <P> Кнопки </P>
           <form>
             <p>
              <input class="MyButton" type="button" value=" Нажми меня нежно (pic) ">
@@ -21,7 +21,8 @@
             url: 'https://randomuser.me/api/',
             dataType: 'json',
             }).then(function(data) {
-             alert(data.large); 
+             alert(data.large);
+             <a href="/large"> 
              console.log(data);
             });
           }
